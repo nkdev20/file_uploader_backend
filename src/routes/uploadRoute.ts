@@ -6,7 +6,9 @@ import { Worker } from "worker_threads";
 const route = Router();
 
 route.post("/upload", fileUpload, validations, (req, res) => {
-  res.json("File created succeshylly");
+  res.json({
+    message: "File created successfully",
+  });
 });
 
 export const uploadRoute = route;
